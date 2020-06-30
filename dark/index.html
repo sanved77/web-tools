@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Full Screen Dark</title>
 </head>
 
 <style>
@@ -14,9 +14,14 @@
     }
 
     #btn {
+		width: 10%;
+		height: 10vh;
         position: absolute;
-        top: 50%;
-        left: 50%;
+        margin: auto;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
         color: #bbb;
         font-size: 1.5em;
         background-color: #00000000;
@@ -24,13 +29,15 @@
 </style>
 <body>
     
-    <button id="btn">Full</button>
+    <button id="btn">Get Full Screen</button>
 
     <script>
         document.getElementById("btn").addEventListener('click', (e) => {
             if (document.fullscreenElement) {
+				document.querySelector('#btn').innerHTML = 'Exit Full Screen'
                 document.exitFullscreen();
             } else {
+				document.querySelector('#btn').innerHTML = 'Get Full Screen'
                 document.documentElement.requestFullscreen();
             }
         });
