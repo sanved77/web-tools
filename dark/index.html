@@ -34,10 +34,10 @@
     <script>
         document.getElementById("btn").addEventListener('click', (e) => {
             if (document.fullscreenElement) {
-				document.querySelector('#btn').innerHTML = 'Exit Full Screen'
+				document.querySelector('#btn').innerHTML = 'Get Full Screen'
                 document.exitFullscreen();
             } else {
-				document.querySelector('#btn').innerHTML = 'Get Full Screen'
+				document.querySelector('#btn').innerHTML = 'Exit Full Screen'
                 document.documentElement.requestFullscreen();
             }
         });
